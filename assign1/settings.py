@@ -27,7 +27,7 @@ SECRET_KEY = '+j$&qta23c*(3c+y*u##sfdyo6*(t84e*ns%5ht03l5%!r(j(c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://nishnk7799.herokuapp.com/','https://github.com/nishnk7799/Presence_Service_Assignment','127.0.0.1:8000']
 
 
 # Application definition
