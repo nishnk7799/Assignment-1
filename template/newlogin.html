@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+    {%load static%}
+{% block title %} Login {% endblock title %}
+    {% block body %}
+        <div class="container">
+
+            <div class="row mt-5" style="opacity: 0.8;">
+                <div class="col-4"></div>
+                <div class="col-4 text-center mt-5 pl-5 pr-5 bg-light" style="border-radius: 5px;">
+                    <h1 class="check1 mb-4 undr pt-5"> Sign in</h1>
+                    <hr class="bg-dark">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <input type="email" style="font-size:16px ;" class="url mb-3 mt-4 text-center" name="email" placeholder="Email" required>
+                        <input type="password" style="font-size:16px ;" name="password" id="" class="url text-center mb-2" placeholder="Password" required>
+                        <p class="ch" style="color: red;"> {%if formpost%}
+                            Email or Password is Incorrect
+                            {% endif %}
+                        </p>
+                        
+                       
+                        <input type="submit" class="newbtn ml-1 mt-2" value="Log in">
+                    </form>
+
+                    <a href="{% url 'forgot' %}"><h5 class="undr ch">Forgot Password
+                    </h5></a>
+
+                    <a class="btn btn-outline-primary ml-auto undr" href="{% url 'reg' %}">Register Here</a>
+                </div>
+    </div>
+{% endblock body %}
